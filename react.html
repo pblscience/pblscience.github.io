@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>PBL Science - Reactions</title>
+	<title>PBL Science - Fakerpoint</title>
   <meta http-equiv="set-cookie" content="Hi=Hello!;">
 
   <link rel='shortcut icon' href='thelogo.jpg' type='image/x-icon'/ >
@@ -72,9 +72,41 @@
 
 .floatRight { float: right; }
 
+.Fakerpoint {
+  width: 94.1%;
+  height: 58.8%;
+  border-width: 3px;
+  border-style: solid;
+  display: inline-block;
+  background-color: #000000;
+  margin: auto;
+}
+.center-text{
+    line-height: 50px;
+    text-align: center;
+    vertical-align:middle;
+    display: table-cell;
+}
   </style>
 </head>
 <body>
+<script>
+function loadDoc(url, cfunc) {
+  var xhttp;
+  xhttp=new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      cfunc(xhttp);
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+
+function myFunction(xhttp) {
+  document.getElementById("loadpage").innerHTML = xhttp.responseText;
+}
+</script>
 <nav class="navbar navbar-custom navbar-fixed-top">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed glyphicon glyphicon-th-list" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -104,7 +136,7 @@
           <h2 style="text-align: center;">Presentation</h2>
           <!-- <img class="img-responsive center-block" src="http://www.elitesoft.com/web/personnel/bsmith/bill597.jpg"> -->
           <!-- <p class="center-block" style="text-align: center; max-width: 202px;">Bill Smith is a proffesional music maker. He uses hi-tech computer software to generate the amazing sounds you hear today!</p> -->
-          <h2>Reaction 1</h2>
+          <!-- <h2>Reaction 1</h2>
           <h3 style="text-align: center;"><b>Sodium and Chlorine</b></h3>
           
           <img class="ad media-left image-responsive floatLeft" width="200px" src="http://rlv.zcache.com/na_sodium_chemistry_periodic_table_symbol_square_sticker-re5aa53fd08ad47ed8c7b4e1df70854e3_v9wf3_8byvr_512.jpg">
@@ -113,7 +145,7 @@
           <p class="logoHeader" style="max-width: 60%; vertical-align: middle; text-align: center; display: inline-block;">Sodium (alkali), Magnesium (alkali earth metals), Chlorine (halogens), and Neon (noble gases) </p>
           <br><br><br><br><br><br><br>
           <p style="margin-left: 2.5%;" class="floatleft">Sodium Facts</p>
-          <p style="margin-right: 3%; text-align: right; "class="">Chlorine Facts</p>
+          <p style="margin-right: 3%; text-align: right; "class="">Chlorine Facts</p> -->
           
           <!-- <div style="float:right; margin-top: 4%;" class="ad"><img src="thelogo.jpg"></div> -->
           <!-- <p>FOR IMMEDIATE RELEASE <br>
@@ -123,13 +155,55 @@ Contact: Bill Smith<br>
 555-744-5291 bsmith@inbound.plus<br>
 billsmith.us.to<br> -->
 
+  <!-- <div class="fakerpoint">
+    <p style="margin-left: .5%; font-size: 10; padding: 0; float:left; display: inline-block;">Fakerpoint Pro</p>
+          <h3 style="text-align: center; display: block;">Reaction 1</h3>
+          <h3 style="text-align: center; display: block;"><b>Sodium and Chlorine</b></h3>
+          
+          <img class="ad media-left image-responsive floatLeft" width="200px" src="http://rlv.zcache.com/na_sodium_chemistry_periodic_table_symbol_square_sticker-re5aa53fd08ad47ed8c7b4e1df70854e3_v9wf3_8byvr_512.jpg">
+          
+          <img class="ad pull-right img-responsive floatRight" width="200px" src="http://sciencenotes.org/wp-content/uploads/2016/07/017-Chlorine-300x300.png">
+          <p class="logoHeader center-block" style="max-width: 40%; vertical-align: middle; text-align: center; display: inline-block;">Sodium (alkali), Magnesium (alkali earth metals), Chlorine (halogens), and Neon (noble gases) </p>
+          <br><br><br><br><br><br><br>
+          <p style="margin-left: 2.5%;" class="floatleft">Sodium Facts</p>
+          <p style="margin-right: 3%; text-align: right; "class="">Chlorine Facts</p>
+          
+  </div> -->
+<div class="hidden">
+  <script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+      var images = new Array()
+      function preload() {
+        for (i = 0; i < preload.arguments.length; i++) {
+          images[i] = new Image()
+          images[i].src = preload.arguments[i]
+        }
+      }
+      preload(
+        "slides/slide1.png",
+        "slides/slide2.png",
+        "slides/slide3.png",
+        "slides/slide4.png",
+        "slides/slide5.png",
+        "slides/slide6.png",
+        "slides/slide7.png",
+        "slides/slide8.png",
+        "slides/slide9.png"
+      )
+    //--><!]]>
+  </script>
+</div>
+<div class="" id="loadpage"></div>
+<div class="fakerpoint" style="position: abdolute; float:left; margin-top: -92%; visibility: hidden;"><p style="color: white;">If you see this, please enable javascript.</p></div>
+
+  <body onload="loadDoc('slides/slide1.txt', myFunction)">
   
       	</div>
         
       </div>
      </div>
 </div>
-<!-- updater -->
+<!-- updated -->
 
 
 
