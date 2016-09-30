@@ -1,2 +1,2 @@
 <img class="img-responsive center-block" src="slides/Slide4.PNG">
-<a onclick="loadDoc('slides/slide5.txt', myFunction)" href="#">Next Slide</a>
+<a onclick="loadDoc('slides/slide3.txt', myFunction)" href="#">Previous Slide</a><a style="float: right;"onclick="loadDoc('slides/slide5.txt', myFunction)" href="#">Next Slide</a>
