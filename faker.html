@@ -89,6 +89,23 @@
   </style>
 </head>
 <body>
+<script>
+function loadDoc(url, cfunc) {
+  var xhttp;
+  xhttp=new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      cfunc(xhttp);
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+
+function myFunction(xhttp) {
+  document.getElementById("loadpage").innerHTML = xhttp.responseText;
+}
+</script>
 <nav class="navbar navbar-custom navbar-fixed-top">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed glyphicon glyphicon-th-list" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -137,7 +154,7 @@ Contact: Bill Smith<br>
 555-744-5291 bsmith@inbound.plus<br>
 billsmith.us.to<br> -->
 
-  <div class="fakerpoint">
+  <!-- <div class="fakerpoint">
     <p style="margin-left: .5%; font-size: 10; padding: 0; float:left; display: inline-block;">Fakerpoint Pro</p>
           <h3 style="text-align: center; display: block;">Reaction 1</h3>
           <h3 style="text-align: center; display: block;"><b>Sodium and Chlorine</b></h3>
@@ -150,8 +167,10 @@ billsmith.us.to<br> -->
           <p style="margin-left: 2.5%;" class="floatleft">Sodium Facts</p>
           <p style="margin-right: 3%; text-align: right; "class="">Chlorine Facts</p>
           
-  </div>
-  
+  </div> -->
+<div id="loadpage"></div>
+  <body onload="loadDoc('slides/slide1.txt', myFunction)">
+  <a onclick="loadDoc('slides/slide2.txt', myFunction)" href="#">Next Slide</a>
       	</div>
         
       </div>
