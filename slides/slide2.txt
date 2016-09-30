@@ -1,1 +1,2 @@
-slide2.png
+<img class="img-responsive center-block" src="slides/Slide2.PNG">
+<a onclick="loadDoc('slides/slide3.txt', myFunction)" href="#">Next Slide</a>
